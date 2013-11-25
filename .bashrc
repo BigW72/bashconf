@@ -56,7 +56,7 @@ if [ "$color_prompt" = yes ]; then
 	PS1='\[\033[01;33m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     elif [ $HOSTNAME == "moltar" ]; then
 	PS1='\[\033[01;36m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    elif [ $HOSTNAME == "grover" ]; then
+    elif [ $HOSTNAME == "grover.greenspan.private" ]; then
 	PS1='\[\033[01;35m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     else
 	PS1='\[\033[01;37m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
