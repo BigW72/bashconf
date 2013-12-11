@@ -128,3 +128,7 @@ fi
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# locale stuff
+export LC_ALL=en_ZA
+export LANGUAGE=en_ZA.UTF-8
