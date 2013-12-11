@@ -123,12 +123,15 @@ fi
 
 if [ $OSTYPE = "darwin12" ]; then 
 	HOME=/Users/wessel
-	PATH=/Users/wessel/bin:/opt/local/bin:/Developer/usr/bin:$PATH
+	PATH=/Users/wessel/bin:/Developer/usr/bin:$PATH
 fi
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-# locale stuff
-export LC_ALL=en_ZA
-export LANGUAGE=en_ZA.UTF-8
+# locale stuff for Ubuntu
+
+if [ $OSTYPE = "linux-gnu" ]; then # Just Ubuntu on our patch for now
+	export LC_ALL=en_ZA
+	export LANGUAGE=en_ZA.UTF-8
+fi
