@@ -121,7 +121,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-if [ $OSTYPE = "darwin12" ]; then 
+if [[ "$OSTYPE" =~ darwin[:digit:]* ]]; then 
 	HOME=/Users/wessel
 	PATH=/Users/wessel/bin:/Developer/usr/bin:$PATH
 fi
@@ -134,4 +134,9 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 if [ $OSTYPE = "linux-gnu" ]; then # Just Ubuntu on our patch for now
 	export LC_ALL=en_ZA
 	export LANGUAGE=en_ZA.UTF-8
+fi
+
+if [ -x /usr/libexec/path_helper ]; then
+        eval `/usr/libexec/path_helper -s`
+        defaults write $HOME/.MacOSX/environment PATH "$PATH"
 fi
